@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".informationtech">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,16 +16,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="90dp"
-            android:background="@drawable/buttondesign"
-            android:text="SYLLABUS"
-            android:textSize="50dp"
-            android:textStyle="bold" />
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/it" />
 
         <Button
             android:id="@+id/button"
@@ -59,6 +56,8 @@
             android:text="MCA"
             android:textSize="40dp"
             android:textStyle="bold" />
+
+
 
     </LinearLayout>
 </RelativeLayout>
