@@ -7,32 +7,38 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SRMUS"
         tools:targetApi="31">
+
+        <!-- Home Activity is the main entry point -->
         <activity
-            android:name=".informationtech"
+            android:name=".home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity
 
+
+
+        <!-- AboutSRM Activity -->
+        <activity
             android:name=".aboutsrm"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<!--        &lt;!&ndash; Basicsci Activity &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name=".basicsci"-->
+<!--            android:exported="true" />-->
+
+<!--        &lt;!&ndash; Informationtech Activity &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name=".informationtech"-->
+<!--            android:exported="true" />-->
+
     </application>
 
 </manifest>
