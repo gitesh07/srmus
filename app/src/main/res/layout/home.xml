@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#007bff"
+   
 
     tools:context=".home">
 
@@ -15,13 +15,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/bg"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
 
         <!-- First ImageView -->
         <ImageView
@@ -51,57 +53,24 @@
                 android:onClick="onButtonClick"
                 android:padding="8dp"
                 android:scaleType="fitCenter"
-                android:background="transparent"
+
+
                 android:src="@drawable/roundlogosrm"
                 tools:ignore="ContentDescription,OnClick,SpeakableTextPresentCheck" />
 
-            <ImageButton
-                android:id="@+id/insta"
-                android:onClick="onButtonClick"
-                android:scaleType="fitCenter"
-                android:src="@drawable/instagram"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="400dp"
-                android:background="null"
-                tools:ignore="MissingConstraints,OnClick" />
-
-        <ImageButton
-            android:id="@+id/facebook"
-            android:onClick="onButtonClick"
-            android:scaleType="fitCenter"
-            android:src="@drawable/facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="400dp"
-            tools:ignore="MissingConstraints,OnClick" />
 
 
-        <ImageButton
-            android:id="@+id/linkedin"
-            android:onClick="onButtonClick"
-            android:scaleType="fitCenter"
-            android:src="@drawable/linkedin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="440dp"
-            tools:ignore="MissingConstraints,OnClick" />
-
-
-        <ImageButton
-            android:id="@+id/twitter"
-            android:onClick="onButtonClick"
-            android:scaleType="fitCenter"
-            android:src="@drawable/twitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="440dp"
-            tools:ignore="MissingConstraints,OnClick" />
+            <!-- ImageSwitcher -->
+            <ImageSwitcher
+                android:id="@+id/imageSwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out"
+                tools:ignore="ObsoleteLayoutParam" />
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
